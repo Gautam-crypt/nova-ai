@@ -10,7 +10,7 @@ import { ConfirmModal } from '@/components/billing/ConfirmModal';
 import { useAuthStore } from '@/stores/authStore';
 import { billingAPI, userAPI } from '@/api/client';
 
-export default function BillingDashboard() {
+function BillingDashboardContent() {
   const { user } = useAuthStore();
   const searchParams = useSearchParams();
   const [usage, setUsage] = useState({ current: 0, limit: 50 });
@@ -165,5 +165,12 @@ export default function BillingDashboard() {
         danger
       />
     </div>
+  );
+}
+export default function BillingDashboard() {
+  return (
+    <React.Suspense fallback={<div className="p-8 text-center text-[var(--nova-muted)]">Loading billing...</div>}>
+      <BillingDashboardContent />
+    </React.Suspense>
   );
 }
