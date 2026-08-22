@@ -43,4 +43,4 @@ bcrypt
 pypdf
 python-multipart
 sse-starlette
-
+psycopg2-binary
