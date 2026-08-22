@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --nova-bg:       #0A0A0F;
+  --nova-card:     #12121A;
+  --nova-border:   #1E1E2E;
+  --nova-purple:   #7F77DD;
+  --nova-blue:     #378ADD;
+  --nova-green:    #1D9E75;
+  --nova-amber:    #EF9F27;
+  --nova-red:      #E24B4A;
+  --nova-gold:     #D4A017;
+  --nova-text:     #E8E8F0;
+  --nova-muted:    #6B6B80;
+  
+  --background: var(--nova-bg);
+  --foreground: var(--nova-text);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-nova-bg: var(--nova-bg);
+  --color-nova-card: var(--nova-card);
+  --color-nova-border: var(--nova-border);
+  --color-nova-purple: var(--nova-purple);
+  --color-nova-blue: var(--nova-blue);
+  --color-nova-green: var(--nova-green);
+  --color-nova-amber: var(--nova-amber);
+  --color-nova-red: var(--nova-red);
+  --color-nova-gold: var(--nova-gold);
+  --color-nova-text: var(--nova-text);
+  --color-nova-muted: var(--nova-muted);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}

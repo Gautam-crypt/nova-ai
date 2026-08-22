@@ -1,0 +1,46 @@
+# ── JARVIS AUTH + BIOMETRICS ─────────────────────────────
+opencv-python>=4.9.0
+mediapipe>=0.10.30       # Python 3.13 requires >= 0.10.30
+numpy>=1.26.0
+scikit-learn>=1.4.0
+
+# ── JARVIS BRAIN (local LLM) ─────────────────────────────
+ollama
+openai
+
+# ── JARVIS SENSES ─────────────────────────────────────────
+openai-whisper
+sounddevice
+librosa
+SpeechRecognition
+
+# ── JARVIS EMOTIONS ───────────────────────────────────────
+deepface
+tf-keras
+
+# ── JARVIS BODY ───────────────────────────────────────────
+pyttsx3
+pyautogui
+psutil
+
+# ── UTILS ─────────────────────────────────────────────────
+pyyaml
+python-dotenv
+chromadb
+
+# ── FASTAPI BACKEND (Phase 2 onwards) ────────────────────
+fastapi==0.111.0
+uvicorn==0.30.0
+anthropic
+python-dotenv
+websockets
+python-multipart
+httpx
+sqlalchemy
+python-jose[cryptography]
+passlib[bcrypt]
+bcrypt
+pypdf
+python-multipart
+sse-starlette
+
