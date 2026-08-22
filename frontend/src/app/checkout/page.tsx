@@ -31,11 +31,11 @@ export default function CheckoutPage() {
       const BETA_MODE = process.env.NEXT_PUBLIC_BETA_MODE === 'true';
       if (BETA_MODE) {
         // Bypass Stripe for beta testing
-        await billingAPI.subscribe({ plan_id: planId, billing_cycle: cycle });
+        await billingAPI.subscribe({ plan_id: planId || '', billing_cycle: cycle });
         router.push('/dashboard/billing?success=true');
       } else {
         // Here you would integrate Stripe.js, but per prompt requirements, we fall back to API call if beta
-        await billingAPI.subscribe({ plan_id: planId, billing_cycle: cycle });
+        await billingAPI.subscribe({ plan_id: planId || '', billing_cycle: cycle });
         router.push('/dashboard/billing?success=true');
       }
     } catch (err: any) {
